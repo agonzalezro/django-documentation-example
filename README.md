@@ -7,7 +7,7 @@ Setup
 -----
 
     $ mkvirtualenv [whatever]
-    $ pip install sphinx
+    $ pip install -r requirements.txt
 
 Creating docs configuration
 ---------------------------
@@ -15,7 +15,7 @@ Creating docs configuration
 *I've removed the explanations of the questions, just run the command if you
 wanna see them.*
 
-$ sphinx-quickstart
+    $ sphinx-quickstart
 
     > Root path for the documentation [.]: docs
     > Separate source and build directories (y/N) [n]:
@@ -39,12 +39,20 @@ $ sphinx-quickstart
     > Create Makefile? (Y/n) [y]:
     > Create Windows command file? (Y/n) [y]: n
 
+The only changes that we need to do after this wizard is edit the generated
+`conf.py` file and:
+
+- add our `syspath` there (there is a commented line).
+
+- add the `sphinx.ext.graphviz` extensions to the list of installed extensions.
+
 Write your documentation
 ------------------------
 
 I will not add this to the `README.md` but if you check the source code of the
 app you can see how I wrote some example documentation for you to follow. But,
-please, take a look to the [sphinx tutorial](http://sphinx-doc.org/latest/tutorial.html).
+please, take a look to the
+[sphinx tutorial](http://sphinx-doc.org/latest/tutorial.html).
 That link is invaluable.
 
 Generating docs
@@ -57,3 +65,5 @@ Where is my documentation
 -------------------------
 
 You will find it on `./docs/_build/html/index.html`.
+
+I ignored the `_build` path to force you to create the documentation by hand :)
