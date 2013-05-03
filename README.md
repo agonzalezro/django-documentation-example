@@ -15,6 +15,9 @@ Creating docs configuration
 *I've removed the explanations of the questions, just run the command if you
 wanna see them.*
 
+You don't need to follow this steps in this projects since the configuration
+is already created, but I wrote it here FYI.
+
     $ sphinx-quickstart
 
     > Root path for the documentation [.]: docs

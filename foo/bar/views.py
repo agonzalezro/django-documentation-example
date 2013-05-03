@@ -32,15 +32,21 @@ def this_is_just_for_show_a_reference():
     """
 
 
-def get_capitalized_name(name='Alex'):
+def get_capitalized_name(name='Alex', does_not_matter=None):
     """Capitalize the name and return it.
 
     I just want to make a reference to the other function documented in this
     module :py:func:`this_is_just_for_show_a_reference`.
 
     :param name: a string with the name that you want to capitalize.
+    :param does_not_matter: just an example second argument.
+
+    :type name: basestring
+    :type does_not_matter: basestring or None
 
     :returns: a string with the name capitalized.
+
+    :rtype: string or None
 
     >>> get_capitalized_name('Alex')
     'Alex'
